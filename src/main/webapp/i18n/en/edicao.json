@@ -1,0 +1,26 @@
+{
+  "indxApp": {
+    "edicao": {
+      "home": {
+        "title": "Edicaos",
+        "createLabel": "Create a new Edicao",
+        "createOrEditLabel": "Create or edit a Edicao",
+        "notFound": "No Edicaos found"
+      },
+      "created": "A new Edicao is created with identifier {{ param }}",
+      "updated": "A Edicao is updated with identifier {{ param }}",
+      "deleted": "A Edicao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Edicao {{ id }}?"
+      },
+      "detail": {
+        "title": "Edicao"
+      },
+      "numero": "Numero",
+      "dataPublicacao": "Data Publicacao",
+      "referencia": "Referencia",
+      "materia": "Materia",
+      "revista": "Revista"
+    }
+  }
+}

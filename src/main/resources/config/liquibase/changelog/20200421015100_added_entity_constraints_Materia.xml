@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity Materia.
+    -->
+    <changeSet id="20200421015100-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="materia_id"
+                                 baseTableName="materia_tag"
+                                 constraintName="fk_materia_tag_materia_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="materia"/>
+
+        <addForeignKeyConstraint baseColumnNames="tag_id"
+                                 baseTableName="materia_tag"
+                                 constraintName="fk_materia_tag_tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"/>
+        
+        <addForeignKeyConstraint baseColumnNames="materia_id"
+                                 baseTableName="materia_autor"
+                                 constraintName="fk_materia_autor_materia_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="materia"/>
+
+        <addForeignKeyConstraint baseColumnNames="autor_id"
+                                 baseTableName="materia_autor"
+                                 constraintName="fk_materia_autor_autor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="autor"/>
+        
+        <addForeignKeyConstraint baseColumnNames="secao_id"
+                                 baseTableName="materia"
+                                 constraintName="fk_materia_secao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="secao"/>
+
+        <addForeignKeyConstraint baseColumnNames="edicao_id"
+                                 baseTableName="materia"
+                                 constraintName="fk_materia_edicao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="edicao"/>
+
+    </changeSet>
+</databaseChangeLog>

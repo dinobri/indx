@@ -1,0 +1,26 @@
+{
+  "indxApp": {
+    "revista": {
+      "home": {
+        "title": "Revistas",
+        "createLabel": "Create a new Revista",
+        "createOrEditLabel": "Create or edit a Revista",
+        "notFound": "No Revistas found"
+      },
+      "created": "A new Revista is created with identifier {{ param }}",
+      "updated": "A Revista is updated with identifier {{ param }}",
+      "deleted": "A Revista is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Revista {{ id }}?"
+      },
+      "detail": {
+        "title": "Revista"
+      },
+      "nome": "Nome",
+      "descricao": "Descricao",
+      "periodicidade": "Periodicidade",
+      "secao": "Secao",
+      "edicao": "Edicao"
+    }
+  }
+}

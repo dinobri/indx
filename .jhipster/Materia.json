@@ -1,0 +1,64 @@
+{
+    "name": "Materia",
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paginaInicial",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "paginaFinal",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "tag",
+            "otherEntityRelationshipName": "materia",
+            "relationshipName": "tag",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "autor",
+            "otherEntityRelationshipName": "materia",
+            "relationshipName": "autor",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "secao",
+            "otherEntityRelationshipName": "materia",
+            "relationshipName": "secao",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "edicao",
+            "otherEntityRelationshipName": "materia",
+            "relationshipName": "edicao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200421015100",
+    "entityTableName": "materia",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

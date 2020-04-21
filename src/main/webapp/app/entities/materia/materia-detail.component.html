@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="materia">
+            <h2><span jhiTranslate="indxApp.materia.detail.title">Materia</span> {{ materia.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="indxApp.materia.titulo">Titulo</span></dt>
+                <dd>
+                    <span>{{ materia.titulo }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ materia.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.paginaInicial">Pagina Inicial</span></dt>
+                <dd>
+                    <span>{{ materia.paginaInicial }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.paginaFinal">Pagina Final</span></dt>
+                <dd>
+                    <span>{{ materia.paginaFinal }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.tag">Tag</span></dt>
+                <dd>
+                    <span *ngFor="let tag of materia.tags; let last = last">
+                        <a [routerLink]="['/tag', tag?.id, 'view']">{{ tag.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.autor">Autor</span></dt>
+                <dd>
+                    <span *ngFor="let autor of materia.autors; let last = last">
+                        <a [routerLink]="['/autor', autor?.id, 'view']">{{ autor.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.secao">Secao</span></dt>
+                <dd>
+                    <div *ngIf="materia.secao">
+                        <a [routerLink]="['/secao', materia.secao?.id, 'view']">{{ materia.secao?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="indxApp.materia.edicao">Edicao</span></dt>
+                <dd>
+                    <div *ngIf="materia.edicao">
+                        <a [routerLink]="['/edicao', materia.edicao?.id, 'view']">{{ materia.edicao?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/materia', materia.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

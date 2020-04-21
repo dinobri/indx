@@ -1,0 +1,38 @@
+{
+    "name": "Autor",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomeReal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alcunha",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "materia",
+            "otherEntityRelationshipName": "autor",
+            "relationshipName": "materia",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200421014900",
+    "entityTableName": "autor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

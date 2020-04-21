@@ -1,0 +1,43 @@
+{
+    "name": "Edicao",
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dataPublicacao",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "referencia",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "materia",
+            "otherEntityRelationshipName": "edicao",
+            "relationshipName": "materia"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "revista",
+            "otherEntityRelationshipName": "edicao",
+            "relationshipName": "revista",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200421015000",
+    "entityTableName": "edicao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

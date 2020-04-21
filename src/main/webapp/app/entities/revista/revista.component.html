@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="indxApp.revista.home.title">Revistas</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-revista" [routerLink]="['/revista/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="indxApp.revista.home.createLabel">
+            Create a new Revista
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="revistas?.length === 0">
+        <span jhiTranslate="indxApp.revista.home.notFound">No revistas found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="revistas?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="indxApp.revista.nome">Nome</span></th>
+                    <th scope="col" ><span jhiTranslate="indxApp.revista.descricao">Descricao</span></th>
+                    <th scope="col" ><span jhiTranslate="indxApp.revista.periodicidade">Periodicidade</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let revista of revistas ;trackBy: trackId">
+                    <td><a [routerLink]="['/revista', revista.id, 'view']">{{ revista.id }}</a></td>
+                    <td>{{ revista.nome }}</td>
+                    <td>{{ revista.descricao }}</td>
+                    <td jhiTranslate="{{ 'indxApp.Periodicidade.' + revista.periodicidade }}">{{ revista.periodicidade }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/revista', revista.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/revista', revista.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(revista)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

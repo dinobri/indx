@@ -1,0 +1,24 @@
+{
+  "indxApp": {
+    "grupoTag": {
+      "home": {
+        "title": "Grupo Tags",
+        "createLabel": "Create a new Grupo Tag",
+        "createOrEditLabel": "Create or edit a Grupo Tag",
+        "notFound": "No Grupo Tags found"
+      },
+      "created": "A new Grupo Tag is created with identifier {{ param }}",
+      "updated": "A Grupo Tag is updated with identifier {{ param }}",
+      "deleted": "A Grupo Tag is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Grupo Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Grupo Tag"
+      },
+      "nome": "Nome",
+      "cor": "Cor",
+      "tag": "Tag"
+    }
+  }
+}
