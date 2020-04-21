@@ -1,0 +1,55 @@
+entity Revista{
+	nome String,
+    descricao String,
+    periodicidade Periodicidade
+}
+
+entity Secao{
+	titulo String,
+    descricao String,
+}
+
+entity Autor{
+	nome String,
+    nomeReal String,
+    alcunha String
+}
+
+entity Edicao{
+	numero Integer,
+	dataPublicacao LocalDate,
+    referencia String
+}
+
+entity Materia{
+	titulo String,
+	descricao String,
+    paginaInicial Integer,
+    paginaFinal Integer
+}
+
+entity Tag{
+	nome String
+}
+
+entity GrupoTag{
+	nome String,
+    cor String
+}
+enum Periodicidade {
+  MENSAL, ESPORADICO
+}
+
+relationship OneToMany{
+  Revista to Secao,
+  Revista to Edicao,
+  Secao to Materia,
+  Edicao to Materia,
+  GrupoTag to Tag
+}
+
+relationship ManyToMany {
+  Materia to Tag,
+  Materia to Autor
+}
+

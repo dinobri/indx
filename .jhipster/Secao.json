@@ -1,0 +1,39 @@
+{
+    "name": "Secao",
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "materia",
+            "otherEntityRelationshipName": "secao",
+            "relationshipName": "materia"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "revista",
+            "otherEntityRelationshipName": "secao",
+            "relationshipName": "revista",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200421014800",
+    "entityTableName": "secao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

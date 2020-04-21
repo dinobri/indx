@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="autor">
+            <h2><span jhiTranslate="indxApp.autor.detail.title">Autor</span> {{ autor.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="indxApp.autor.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ autor.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.autor.nomeReal">Nome Real</span></dt>
+                <dd>
+                    <span>{{ autor.nomeReal }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.autor.alcunha">Alcunha</span></dt>
+                <dd>
+                    <span>{{ autor.alcunha }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/autor', autor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -40,6 +40,22 @@ public class CacheConfiguration {
             createCache(cm, br.com.dinobri.domain.User.class.getName());
             createCache(cm, br.com.dinobri.domain.Authority.class.getName());
             createCache(cm, br.com.dinobri.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.com.dinobri.domain.Revista.class.getName());
+            createCache(cm, br.com.dinobri.domain.Revista.class.getName() + ".secaos");
+            createCache(cm, br.com.dinobri.domain.Revista.class.getName() + ".edicaos");
+            createCache(cm, br.com.dinobri.domain.Secao.class.getName());
+            createCache(cm, br.com.dinobri.domain.Secao.class.getName() + ".materias");
+            createCache(cm, br.com.dinobri.domain.Autor.class.getName());
+            createCache(cm, br.com.dinobri.domain.Autor.class.getName() + ".materias");
+            createCache(cm, br.com.dinobri.domain.Edicao.class.getName());
+            createCache(cm, br.com.dinobri.domain.Edicao.class.getName() + ".materias");
+            createCache(cm, br.com.dinobri.domain.Materia.class.getName());
+            createCache(cm, br.com.dinobri.domain.Materia.class.getName() + ".tags");
+            createCache(cm, br.com.dinobri.domain.Materia.class.getName() + ".autors");
+            createCache(cm, br.com.dinobri.domain.Tag.class.getName());
+            createCache(cm, br.com.dinobri.domain.Tag.class.getName() + ".materias");
+            createCache(cm, br.com.dinobri.domain.GrupoTag.class.getName());
+            createCache(cm, br.com.dinobri.domain.GrupoTag.class.getName() + ".tags");
             // jhipster-needle-ehcache-add-entry
         };
     }

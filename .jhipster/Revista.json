@@ -1,0 +1,43 @@
+{
+    "name": "Revista",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "periodicidade",
+            "fieldType": "Periodicidade",
+            "fieldValues": "MENSAL,ESPORADICO"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "secao",
+            "otherEntityRelationshipName": "revista",
+            "relationshipName": "secao"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "edicao",
+            "otherEntityRelationshipName": "revista",
+            "relationshipName": "edicao"
+        }
+    ],
+    "changelogDate": "20200421014700",
+    "entityTableName": "revista",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

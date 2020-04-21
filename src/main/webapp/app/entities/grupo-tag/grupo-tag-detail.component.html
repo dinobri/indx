@@ -1,0 +1,34 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="grupoTag">
+            <h2><span jhiTranslate="indxApp.grupoTag.detail.title">Grupo Tag</span> {{ grupoTag.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="indxApp.grupoTag.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ grupoTag.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="indxApp.grupoTag.cor">Cor</span></dt>
+                <dd>
+                    <span>{{ grupoTag.cor }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/grupo-tag', grupoTag.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

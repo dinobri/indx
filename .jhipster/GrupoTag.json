@@ -1,0 +1,32 @@
+{
+    "name": "GrupoTag",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cor",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tag",
+            "otherEntityRelationshipName": "grupoTag",
+            "relationshipName": "tag"
+        }
+    ],
+    "changelogDate": "20200421015300",
+    "entityTableName": "grupo_tag",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

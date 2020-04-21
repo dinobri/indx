@@ -1,0 +1,24 @@
+{
+  "indxApp": {
+    "grupoTag": {
+      "home": {
+        "title": "Grupo Tags",
+        "createLabel": "Criar novo Grupo Tag",
+        "createOrEditLabel": "Criar ou editar Grupo Tag",
+        "notFound": "Nenhum Grupo Tag encontrado"
+      },
+      "created": "Um novo Grupo Tag foi criado com o identificador {{ param }}",
+      "updated": "Um Grupo Tag foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Grupo Tag foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Grupo Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Grupo Tag"
+      },
+      "nome": "Nome",
+      "cor": "Cor",
+      "tag": "Tag"
+    }
+  }
+}

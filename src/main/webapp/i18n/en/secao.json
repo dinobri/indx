@@ -1,0 +1,25 @@
+{
+  "indxApp": {
+    "secao": {
+      "home": {
+        "title": "Secaos",
+        "createLabel": "Create a new Secao",
+        "createOrEditLabel": "Create or edit a Secao",
+        "notFound": "No Secaos found"
+      },
+      "created": "A new Secao is created with identifier {{ param }}",
+      "updated": "A Secao is updated with identifier {{ param }}",
+      "deleted": "A Secao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Secao {{ id }}?"
+      },
+      "detail": {
+        "title": "Secao"
+      },
+      "titulo": "Titulo",
+      "descricao": "Descricao",
+      "materia": "Materia",
+      "revista": "Revista"
+    }
+  }
+}
